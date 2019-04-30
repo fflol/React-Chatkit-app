@@ -19,12 +19,13 @@ class SendMessageForm extends React.Component {
     onSubmit = (e) => {
         e.preventDefault()
         this.props.onSubmit(this.state.text)
+        this.setState({text:''})
     }
 
     render() {
         return (
             <form onSubmit={this.onSubmit}>
-                <input style={{ height: '40px' }} className='form-control' type="text" placeholder='' onChange={this.onChange} />
+                <input style={{ height: '40px' }} className='form-control' type="text" placeholder='' value={this.state.text} onChange={this.onChange} />
             </form>
 
         )
