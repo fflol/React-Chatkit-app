@@ -1,12 +1,13 @@
 import React from 'react'
 
 class WhosOnlineList extends React.Component {
-    render() {
+    render() {        
         if (this.props.users) {
             return (
-                <ul>
+                <ul className='bg-dark text-white d-none d-sm-block px-4 py-5' style={{ height: '100vh' }}>
                     {this.props.users.map((user, index) => {
-                        return <li key={index}>{user.name} ({user.presence.state})</li>
+                        const onlineStatus = user.presence.state === 'online' ? 'online' : 'offline' 
+                        return <li className={onlineStatus} key={index}>{user.name}</li>
                     })}
                 </ul>
             )

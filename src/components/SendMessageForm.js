@@ -23,13 +23,10 @@ class SendMessageForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.onSubmit}>
-                    <input type="text" placeholder='' onChange={this.onChange} />
-                    <input type="submit"/>
-                </form>
+            <form onSubmit={this.onSubmit}>
+                <input style={{ height: '40px' }} className='form-control' type="text" placeholder='' onChange={this.onChange} />
+            </form>
 
-            </div>
         )
     }
 }

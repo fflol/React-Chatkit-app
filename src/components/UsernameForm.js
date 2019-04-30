@@ -21,10 +21,10 @@ class UsernameForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.onSubmit}>
-                    <input type="text" placeholder='What is your username?' onChange={this.onChange} />
-                    <input type="submit"/>
+            <div className='container mt-5'>
+                <h1 className='mt-5'>the Council of li’l Tibet in Exile</h1>
+                <form className='mt-4' onSubmit={this.onSubmit}>
+                    <input className='form-control' type="text" placeholder='Your alias...' onChange={this.onChange} />
                 </form>
 
             </div>

@@ -13,22 +13,31 @@ class ChatScreen extends React.Component {
             currentRoom: {},
             currentUser: {},
             usersWhoAreTyping: [],
-        }
+            // scrollHeight: ''
+        }        
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID)
     }
 
     componentDidMount() {
+        this.ul = document.querySelector('ul.overflow-auto');
+        this.timerID = setInterval(() => {
+            this.scrollToBottom()
+        }, 1000);
+
         const chatManager = new ChatManager({
             instanceLocator: 'v1:us1:dcb23730-193e-4b92-8186-ffc227c1077d',
             userId: this.props.currentUsername,
             tokenProvider: new TokenProvider({
                 url: 'https://us1.pusherplatform.io/services/chatkit_token_provider/v1/dcb23730-193e-4b92-8186-ffc227c1077d/token'
-            })
+            }),
         })
 
         chatManager
             .connect()
             .then(currentUser => {
-                console.log(currentUser)
                 this.setState({ currentUser: currentUser })
                 return currentUser.subscribeToRoomMultipart({
                     roomId: '31216441',
@@ -60,6 +69,10 @@ class ChatScreen extends React.Component {
             .catch(error => console.log(error))
     }
 
+    scrollToBottom() {
+        this.ul && (this.ul.scrollTop = 100000)
+    }
+
     sendMessage = (text) => {
         this.state.currentUser.sendMessage({
             roomId: this.state.currentRoom.id,
@@ -76,28 +89,20 @@ class ChatScreen extends React.Component {
 
     render() {
         return (
-            <div style={{
-                display: 'flex',
-                height: '100vh'
-            }}>
-                <div style={{
-                    width: '30%',
-                    backgroundColor: 'tomato'
-                }}>
-                    <WhosOnlineList users={this.state.currentRoom.users} />
-                </div>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column'
-                }}>
-                    <h1>Chat</h1>
-                    <div style={{ flex: 1 }}>
-                        <MessageList messages={this.state.messages} />
+            <div className='container'>
+                <div className='row' style={{ height: '100vh' }}>
+                    <div className='col-sm-3 p-0'>
+                        <WhosOnlineList users={this.state.currentRoom.users} />
                     </div>
-                    <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
-                    <SendMessageForm onSubmit={this.sendMessage} onChange={this.sendTypingEvent} />
-                </div>
-            </div >
+                    <div className='col-sm-9 p-0' style={{ height: '100vh' }}>
+                        <MessageList currentUsername={this.props.currentUsername} messages={this.state.messages} />
+                        <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
+
+                        <SendMessageForm onSubmit={this.sendMessage} onChange={this.sendTypingEvent} />
+                    </div>
+                </div >
+            </div>
+
         )
     }
 }

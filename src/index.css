@@ -1,9 +1,33 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 0;
+  font-family: Raleway, sans-serif 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0
+}
+
+li.online::before {
+  color: lightgreen;
+  content: '\2022';
+  font-size: 4em;
+  padding: 0 6px 0 0;
+  position: relative;
+  top: 21px;
+  line-height: 5px
+}
+
+li.offline::before {
+  color: gray;
+  content: '\2022';
+  font-size: 4em;
+  padding: 0 6px 0 0;
+  position: relative;
+  top: 21px;
+  line-height: 5px
 }

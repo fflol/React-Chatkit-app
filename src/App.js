@@ -21,14 +21,13 @@ class App extends Component {
       body: JSON.stringify({ username })
     })
       .then(response => {
-        console.log('sucess')
         this.setState({
           currentUsername: username,
           currentScreen: 'ChatScreen'
         })
 
       })
-      .catch(error => { console.log(error) })
+      .catch(error => console.log(error))
   }
 
   render() {
