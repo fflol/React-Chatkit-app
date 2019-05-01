@@ -1,4 +1,6 @@
 import React from 'react'
+import TypingIndicator from './TypingIndicator';
+
 
 class MessageList extends React.Component {
     render() {
@@ -17,6 +19,7 @@ class MessageList extends React.Component {
                                 <br />
                         </li>)
                 })}
+                <TypingIndicator usersWhoAreTyping={this.props.usersWhoAreTyping} />
             </ul>
         )
     }

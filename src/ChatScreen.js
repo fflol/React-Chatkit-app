@@ -1,7 +1,7 @@
 import React from 'react'
 import MessageList from './components/MessageList'
 import SendMessageForm from './components/SendMessageForm'
-import TypingIndicator from './components/TypingIndicator'
+// import TypingIndicator from './components/TypingIndicator'
 import WhosOnlineList from './components/WhosOnlineList'
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client/react-native'
 
@@ -95,8 +95,8 @@ class ChatScreen extends React.Component {
                         <WhosOnlineList users={this.state.currentRoom.users} />
                     </div>
                     <div className='col-sm-9 p-0' style={{ height: '100vh' }}>
-                        <MessageList currentUsername={this.props.currentUsername} messages={this.state.messages} />
-                        <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
+                        <MessageList currentUsername={this.props.currentUsername} usersWhoAreTyping={this.state.usersWhoAreTyping} messages={this.state.messages} />
+                        {/* <TypingIndicator  /> */}
 
                         <SendMessageForm onSubmit={this.sendMessage} onChange={this.sendTypingEvent} />
                     </div>
