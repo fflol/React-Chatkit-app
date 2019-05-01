@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-Chatkit-app/static/css/main.edf15c76.chunk.css",
-    "main.js": "/React-Chatkit-app/static/js/main.50fdc9f0.chunk.js",
-    "main.js.map": "/React-Chatkit-app/static/js/main.50fdc9f0.chunk.js.map",
+    "main.js": "/React-Chatkit-app/static/js/main.44dc8f6a.chunk.js",
+    "main.js.map": "/React-Chatkit-app/static/js/main.44dc8f6a.chunk.js.map",
     "runtime~main.js": "/React-Chatkit-app/static/js/runtime~main.f447016f.js",
     "runtime~main.js.map": "/React-Chatkit-app/static/js/runtime~main.f447016f.js.map",
-    "static/js/2.93e7c260.chunk.js": "/React-Chatkit-app/static/js/2.93e7c260.chunk.js",
-    "static/js/2.93e7c260.chunk.js.map": "/React-Chatkit-app/static/js/2.93e7c260.chunk.js.map",
+    "static/js/2.13498116.chunk.js": "/React-Chatkit-app/static/js/2.13498116.chunk.js",
+    "static/js/2.13498116.chunk.js.map": "/React-Chatkit-app/static/js/2.13498116.chunk.js.map",
     "index.html": "/React-Chatkit-app/index.html",
-    "precache-manifest.272c9c6c63d0259591d1d55bf26fe90d.js": "/React-Chatkit-app/precache-manifest.272c9c6c63d0259591d1d55bf26fe90d.js",
+    "precache-manifest.c7b3fb196fb203ff8842feacf2878f9e.js": "/React-Chatkit-app/precache-manifest.c7b3fb196fb203ff8842feacf2878f9e.js",
     "service-worker.js": "/React-Chatkit-app/service-worker.js",
     "static/css/main.edf15c76.chunk.css.map": "/React-Chatkit-app/static/css/main.edf15c76.chunk.css.map"
   }
