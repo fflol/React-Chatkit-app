@@ -12,11 +12,9 @@ class MessageList extends React.Component {
                     const align = message.senderId === this.props.currentUsername ? 'right' : 'left'
                     return (
                         <li style={{textAlign: align}} key={index}>
-                            {/* <div> */}
                                 <span style={{ fontWeight: 'bold' }}>{message.senderId}</span>
                                 <p>{message.parts[0].payload.content}</p>
                                 <br />
-                            {/* </div> */}
                         </li>)
                 })}
             </ul>
