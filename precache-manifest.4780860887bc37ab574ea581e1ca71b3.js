@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "de8fd7ece023523543a3f83a61d18b94",
+    "revision": "51ea9c416f35ef8cdd42be216491e292",
     "url": "/React-Chatkit-app/index.html"
   },
   {
-    "revision": "b0e73a2172dffddcba21",
+    "revision": "01df521f072e56c1d5fc",
     "url": "/React-Chatkit-app/static/css/main.edf15c76.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-Chatkit-app/static/js/2.13498116.chunk.js"
   },
   {
-    "revision": "b0e73a2172dffddcba21",
-    "url": "/React-Chatkit-app/static/js/main.55d7db07.chunk.js"
+    "revision": "01df521f072e56c1d5fc",
+    "url": "/React-Chatkit-app/static/js/main.e6375b49.chunk.js"
   },
   {
     "revision": "7b0c61c433c57fb619bf",
