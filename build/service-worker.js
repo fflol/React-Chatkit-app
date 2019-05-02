@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/React-Chatkit-app/precache-manifest.c7b3fb196fb203ff8842feacf2878f9e.js"
+  "/React-Chatkit-app/precache-manifest.4780860887bc37ab574ea581e1ca71b3.js"
 );
 
 self.addEventListener('message', (event) => {

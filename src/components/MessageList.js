@@ -7,7 +7,7 @@ class MessageList extends React.Component {
         const height = document.documentElement.clientHeight - 40
 
         return (
-            <ul className='overflow-auto pr-5'
+            <ul className='overflow-auto px-5'
                 style={{ height: height }}
             >
                 {this.props.messages.map((message, index) => {

@@ -24,8 +24,9 @@ class SendMessageForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
-                <input style={{ height: '40px' }} className='form-control' type="text" placeholder='' value={this.state.text} onChange={this.onChange} />
+            <form className='row mx-0' onSubmit={this.onSubmit}>
+                <input style={{ height: '40px' }} className='form-control col-10' type="text" placeholder='' value={this.state.text} onChange={this.onChange} />
+                <button className='btn btn-primary btn-sm col-2'>Send</button>
             </form>
 
         )
